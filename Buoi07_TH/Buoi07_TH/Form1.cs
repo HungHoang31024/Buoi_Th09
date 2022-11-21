@@ -15,7 +15,7 @@ namespace Buoi07_TH
                 if (root.Text == kytu)
                 { 
                     TreeNode nodecon = new TreeNode();
-                    nodecon.Text = txtName.Text + "," + txtsurname.Text;
+                    nodecon.Text = txtName.Text + ", " + txtsurname.Text;
                     root.Nodes.Add(nodecon);
                     this.txtName.ResetText();
                     this.txtsurname.ResetText();
@@ -27,12 +27,12 @@ namespace Buoi07_TH
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            for(char i = 'A'; i <= 'Z'; i++)
+           /* for(char i = 'A'; i <= 'Z'; i++)
             {
                 TreeNode root = new TreeNode();
                 root.Text = i.ToString();
                 treeView1.Nodes.Add(root);
-            }
+            }*/
         }
 
         private void btnClose_Click(object sender, EventArgs e)
