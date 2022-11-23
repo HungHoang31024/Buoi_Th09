@@ -45,19 +45,24 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(303, 310);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(315, 305);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(686, 201);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.Click += new System.EventHandler(this.flowLayoutPanel1_Click);
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // picHinhAnh
             // 
+            this.picHinhAnh.ErrorImage = null;
+            this.picHinhAnh.InitialImage = null;
             this.picHinhAnh.Location = new System.Drawing.Point(315, 13);
             this.picHinhAnh.Name = "picHinhAnh";
             this.picHinhAnh.Size = new System.Drawing.Size(665, 286);
+            this.picHinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picHinhAnh.TabIndex = 2;
             this.picHinhAnh.TabStop = false;
+            this.picHinhAnh.WaitOnLoad = true;
             this.picHinhAnh.Click += new System.EventHandler(this.picHinhAnh_Click);
             // 
             // Bài02
