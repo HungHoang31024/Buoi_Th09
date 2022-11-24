@@ -1,4 +1,6 @@
-﻿namespace Bai_6._4
+﻿using System.Net;
+
+namespace Bai_6._4
 {
     public partial class Form1 : Form
     {
@@ -48,11 +50,13 @@
         {
             foreach(Label label in flowLayoutPanel1.Controls)
             {
+                int sum = 0;
                 if(label.BackColor == Color.Blue)
                 {
                     label.BackColor = Color.Yellow;
-                    TongTien = 0;
-                    lbThanhtien.Text = TongTien + "VND";
+                    sum += TongTien;
+                    lbThanhtien.Text = sum + "VND";
+                   
                 }
             }
         }
@@ -70,11 +74,9 @@
             }
         }
 
-      
-
-        private void lbThanhtien_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
     }
 }

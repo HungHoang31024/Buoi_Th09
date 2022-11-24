@@ -70,6 +70,7 @@
             this.treeView1.Location = new System.Drawing.Point(35, 15);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "A";
+            treeNode1.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             treeNode1.Text = "A";
             treeNode2.Name = "B";
             treeNode2.Text = "B";

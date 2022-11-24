@@ -72,6 +72,7 @@
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
@@ -90,7 +91,6 @@
             this.lbThanhtien.Name = "lbThanhtien";
             this.lbThanhtien.Size = new System.Drawing.Size(167, 41);
             this.lbThanhtien.TabIndex = 5;
-            this.lbThanhtien.Click += new System.EventHandler(this.lbThanhtien_Click);
             // 
             // Form1
             // 
