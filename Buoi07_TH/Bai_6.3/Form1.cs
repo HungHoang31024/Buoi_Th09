@@ -68,19 +68,17 @@ namespace Bai_6._3
                 pictureBox1.Image = Image.FromFile(hinhanh[index]);
             }
         }
-
+        
         private void btnStart_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
-            if(index > 9)
-            {
-                index = -1;
-            }
+           
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        
     }
 }

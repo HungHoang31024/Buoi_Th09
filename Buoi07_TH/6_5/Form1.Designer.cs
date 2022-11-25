@@ -31,16 +31,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cboChonHinhVe = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cboColor1 = new System.Windows.Forms.ComboBox();
-            this.nudSize = new System.Windows.Forms.NumericUpDown();
+            this.num = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cboColor2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
+            this.txtmauvien = new System.Windows.Forms.TextBox();
+            this.txtmau = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,8 +69,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cboColor1);
-            this.groupBox1.Controls.Add(this.nudSize);
+            this.groupBox1.Controls.Add(this.txtmauvien);
+            this.groupBox1.Controls.Add(this.num);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(23, 147);
@@ -79,21 +80,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Border";
             // 
-            // cboColor1
+            // num
             // 
-            this.cboColor1.FormattingEnabled = true;
-            this.cboColor1.Location = new System.Drawing.Point(110, 40);
-            this.cboColor1.Name = "cboColor1";
-            this.cboColor1.Size = new System.Drawing.Size(151, 32);
-            this.cboColor1.TabIndex = 3;
-            // 
-            // nudSize
-            // 
-            this.nudSize.Location = new System.Drawing.Point(111, 91);
-            this.nudSize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.nudSize.Name = "nudSize";
-            this.nudSize.Size = new System.Drawing.Size(150, 32);
-            this.nudSize.TabIndex = 2;
+            this.num.Location = new System.Drawing.Point(111, 91);
+            this.num.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.num.Name = "num";
+            this.num.Size = new System.Drawing.Size(150, 32);
+            this.num.TabIndex = 2;
             // 
             // label3
             // 
@@ -115,7 +108,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cboColor2);
+            this.groupBox2.Controls.Add(this.txtmau);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(23, 295);
             this.groupBox2.Name = "groupBox2";
@@ -123,14 +116,6 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fill";
-            // 
-            // cboColor2
-            // 
-            this.cboColor2.FormattingEnabled = true;
-            this.cboColor2.Location = new System.Drawing.Point(93, 53);
-            this.cboColor2.Name = "cboColor2";
-            this.cboColor2.Size = new System.Drawing.Size(151, 32);
-            this.cboColor2.TabIndex = 1;
             // 
             // label4
             // 
@@ -140,6 +125,23 @@
             this.label4.Size = new System.Drawing.Size(62, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "Color";
+            // 
+            // txtmauvien
+            // 
+            this.txtmauvien.Location = new System.Drawing.Point(111, 40);
+            this.txtmauvien.Name = "txtmauvien";
+            this.txtmauvien.Size = new System.Drawing.Size(150, 32);
+            this.txtmauvien.TabIndex = 3;
+            this.txtmauvien.Click += new System.EventHandler(this.txtmauvien_Click);
+            // 
+            // txtmau
+            // 
+            this.txtmau.Location = new System.Drawing.Point(111, 56);
+            this.txtmau.Name = "txtmau";
+            this.txtmau.Size = new System.Drawing.Size(125, 32);
+            this.txtmau.TabIndex = 1;
+            this.txtmau.Click += new System.EventHandler(this.txtmau_Click);
+            this.txtmau.TextChanged += new System.EventHandler(this.txtmauvien_Click);
             // 
             // Form1
             // 
@@ -154,12 +156,13 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Click += new System.EventHandler(this.Form1_Click);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown_1);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove_1);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -172,13 +175,14 @@
         private Label label1;
         private ComboBox cboChonHinhVe;
         private GroupBox groupBox1;
-        private ComboBox cboColor1;
-        private NumericUpDown nudSize;
+        private NumericUpDown num;
         private Label label3;
         private Label label2;
         private GroupBox groupBox2;
-        private ComboBox cboColor2;
         private Label label4;
         private ColorDialog colorDialog1;
+        private ColorDialog colorDialog2;
+        private TextBox txtmauvien;
+        private TextBox txtmau;
     }
 }
