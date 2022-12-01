@@ -12,11 +12,12 @@ namespace Bai7
 {
     public partial class Form4 : Form
     {
-        public Form4()
+        public Form4(double bk)
         {
             InitializeComponent();
+            this.bankinh = bk;
         }
-        public double bankinh;
+         double bankinh;
         public double DienTichHT()
         {
             double dt = (this.bankinh * this.bankinh) * 3.14;
@@ -35,7 +36,12 @@ namespace Bai7
 
         private void btnDong_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); DialogResult thoat;
+            thoat = MessageBox.Show("Bạn Muốn Đóng Chương Trình ?", "Thông báo", MessageBoxButtons.YesNo);
+            if (thoat == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

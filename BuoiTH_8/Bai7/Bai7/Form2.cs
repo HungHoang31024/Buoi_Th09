@@ -12,11 +12,14 @@ namespace Bai7
 {
     public partial class Form2 : Form
     {
-        public Form2()
+
+        public Form2(double c)
         {
             InitializeComponent();
+            this.canha = c;
         }
-        public double canha;
+        //
+        double canha;
         public double DienTich()
         {
             double dientich = this.canha * this.canha;
@@ -35,7 +38,12 @@ namespace Bai7
 
         private void btnDong_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult thoat;
+            thoat = MessageBox.Show("Bạn Muốn Đóng Chương Trình ?", "Thông báo", MessageBoxButtons.YesNo);
+            if (thoat == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

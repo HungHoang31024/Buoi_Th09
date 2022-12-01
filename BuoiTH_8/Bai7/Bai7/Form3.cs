@@ -12,12 +12,14 @@ namespace Bai7
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        public Form3(double d)
         {
             InitializeComponent();
+            this.daia = d;
+            this.ronga = d;
         }
-        public double daia;
-        public double ronga;
+         double daia;
+         double ronga;
         public double ChuViHCN()
         {
             double cv = (this.daia + this.ronga) * 2;
@@ -37,7 +39,12 @@ namespace Bai7
 
         private void btnDong_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); DialogResult thoat;
+            thoat = MessageBox.Show("Bạn Muốn Đóng Chương Trình?", "Thông báo", MessageBoxButtons.YesNo);
+            if (thoat == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

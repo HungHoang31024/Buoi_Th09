@@ -63,7 +63,7 @@
 
         private void btnThucHien_Click(object sender, EventArgs e)
         {
-           /* if (rdbHinhVuong.Checked == true)
+            if (rdbHinhVuong.Checked == true)
             {
                 if (this.txtCanh.Text == "")
                 {
@@ -72,8 +72,7 @@
                 }
                 else
                 {
-                    Form2 f2 = new Form2();
-                    f2.canha = double.Parse(txtCanh.Text);
+                    Form2 f2 = new Form2(double.Parse(txtCanh.Text));
                     f2.ShowDialog();
                 }
             }
@@ -87,9 +86,9 @@
                 }
                 else
                 {
-                    Form3 f3 = new Form3();
-                    f3.daia = double.Parse(txtDai.Text);
-                    f3.ronga = double.Parse(txtRong.Text);
+                    Form3 f3 = new Form3(double.Parse(txtDai.Text) + double.Parse(txtRong.Text));
+
+
                     f3.ShowDialog();
                 }
             }
@@ -102,11 +101,11 @@
                 }
                 else
                 {
-                    Form4 f4 = new Form4();
-                    f4.bankinh = double.Parse(txtBK.Text);
+                    Form4 f4 = new Form4(double.Parse(txtBK.Text));
+                    //f4.bankinh = double.Parse(txtBK.Text);
                     f4.ShowDialog();
                 }
-            }*/
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -131,9 +130,9 @@
                 }
                 else
                 {
-                    Form2 f2 = new Form2();
-                    f2.canha = double.Parse(txtCanh.Text);
+                    Form2 f2 = new Form2(double.Parse(txtCanh.Text));                
                     f2.ShowDialog();
+                   
                 }
             }
 
@@ -146,9 +145,9 @@
                 }
                 else
                 {
-                    Form3 f3 = new Form3();
-                    f3.daia = double.Parse(txtDai.Text);
-                    f3.ronga = double.Parse(txtRong.Text);
+                    Form3 f3 = new Form3(double.Parse(txtDai.Text) + double.Parse(txtRong.Text));
+                   
+                   
                     f3.ShowDialog();
                 }
             }
@@ -161,10 +160,86 @@
                 }
                 else
                 {
-                    Form4 f4 = new Form4();
-                    f4.bankinh = double.Parse(txtBK.Text);
+                    Form4 f4 = new Form4(double.Parse(txtBK.Text));
+                    //f4.bankinh = double.Parse(txtBK.Text);
                     f4.ShowDialog();
                 }
+            }
+        }
+
+        private void tsmExit_Click(object sender, EventArgs e)
+        {
+            DialogResult thoat;
+            thoat = MessageBox.Show("Bạn Muốn Đóng Chương Trình ?", "Thông báo", MessageBoxButtons.YesNo);
+            if (thoat == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void txtCanh_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+       // private bool nonNumberEntered = false;
+        private void txtCanh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nhập lại số");
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nhập lại số");
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtRong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nhập lại số");
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtBK_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nhập lại số");
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
             }
         }
     }
