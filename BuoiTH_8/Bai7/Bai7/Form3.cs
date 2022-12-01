@@ -34,5 +34,10 @@ namespace Bai7
             this.txtDT.Text = DienTichHCN().ToString();
             this.txtCv.Text = ChuViHCN().ToString();
         }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
