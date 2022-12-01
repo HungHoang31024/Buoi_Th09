@@ -63,7 +63,7 @@
 
         private void btnThucHien_Click(object sender, EventArgs e)
         {
-            if (rdbHinhVuong.Checked == true)
+           /* if (rdbHinhVuong.Checked == true)
             {
                 if (this.txtCanh.Text == "")
                 {
@@ -106,7 +106,7 @@
                     f4.bankinh = double.Parse(txtBK.Text);
                     f4.ShowDialog();
                 }
-            }
+            }*/
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -117,6 +117,54 @@
             if (thoat == DialogResult.Yes)
             {
                 Application.Exit();
+            }
+        }
+
+        private void thựcHiệnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (rdbHinhVuong.Checked == true)
+            {
+                if (this.txtCanh.Text == "")
+                {
+                    MessageBox.Show("Hãy nhập vài chiều dài cạnh", "Thông Báo");
+                    this.txtCanh.Focus();
+                }
+                else
+                {
+                    Form2 f2 = new Form2();
+                    f2.canha = double.Parse(txtCanh.Text);
+                    f2.ShowDialog();
+                }
+            }
+
+            else if (rdbHCN.Checked == true)
+            {
+                if ((this.txtDai.Text == "") || (this.txtRong.Text == ""))
+                {
+                    MessageBox.Show("Hãy nhập chiều dài và chièu rộng", "Thông Báo");
+                    this.txtDai.Focus();
+                }
+                else
+                {
+                    Form3 f3 = new Form3();
+                    f3.daia = double.Parse(txtDai.Text);
+                    f3.ronga = double.Parse(txtRong.Text);
+                    f3.ShowDialog();
+                }
+            }
+            else if (rdbHTron.Checked == true)
+            {
+                if (this.txtBK.Text == "")
+                {
+                    MessageBox.Show("Hãy nhật bán kính hình tròn", "Thông Báo");
+                    this.txtBK.Focus();
+                }
+                else
+                {
+                    Form4 f4 = new Form4();
+                    f4.bankinh = double.Parse(txtBK.Text);
+                    f4.ShowDialog();
+                }
             }
         }
     }
