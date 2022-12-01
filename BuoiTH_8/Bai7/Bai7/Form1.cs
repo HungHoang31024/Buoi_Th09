@@ -111,7 +111,13 @@
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
+            DialogResult thoat;
+            thoat = MessageBox.Show("Bạn Muốn Đóng Chương Trình ?", "Thông báo", MessageBoxButtons.YesNo);
+            if (thoat == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
