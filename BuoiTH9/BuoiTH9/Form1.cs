@@ -26,7 +26,7 @@ namespace BuoiTH9
         private void Form1_Load_1(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=DESKTOP-796RQ1F\HUNG;Initial Catalog=QLNV;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=HUNG-T0352;Initial Catalog=QLNV;Integrated Security=True";
             //D lieu combobox Chuc vu
             string sQueryChucVu = @"select * from chucvu";
             daChucVu = new SqlDataAdapter(sQueryChucVu, conn);
